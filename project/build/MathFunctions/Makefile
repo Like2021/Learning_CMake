@@ -80,14 +80,14 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/admin-main/Like/Learning_CMake/project/build/CMakeFiles /home/admin-main/Like/Learning_CMake/project/build/CMakeFiles/progress.marks
-	$(MAKE) -f CMakeFiles/Makefile2 all
+	cd /home/admin-main/Like/Learning_CMake/project/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/admin-main/Like/Learning_CMake/project/build/CMakeFiles /home/admin-main/Like/Learning_CMake/project/build/MathFunctions/CMakeFiles/progress.marks
+	cd /home/admin-main/Like/Learning_CMake/project/build && $(MAKE) -f CMakeFiles/Makefile2 MathFunctions/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/admin-main/Like/Learning_CMake/project/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	$(MAKE) -f CMakeFiles/Makefile2 clean
+	cd /home/admin-main/Like/Learning_CMake/project/build && $(MAKE) -f CMakeFiles/Makefile2 MathFunctions/clean
 .PHONY : clean
 
 # The main clean target
@@ -97,71 +97,60 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	$(MAKE) -f CMakeFiles/Makefile2 preinstall
+	cd /home/admin-main/Like/Learning_CMake/project/build && $(MAKE) -f CMakeFiles/Makefile2 MathFunctions/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	$(MAKE) -f CMakeFiles/Makefile2 preinstall
+	cd /home/admin-main/Like/Learning_CMake/project/build && $(MAKE) -f CMakeFiles/Makefile2 MathFunctions/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	$(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /home/admin-main/Like/Learning_CMake/project/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
-#=============================================================================
-# Target rules for targets named Tutorial
+# Convenience name for target.
+MathFunctions/CMakeFiles/MathFunctions.dir/rule:
+	cd /home/admin-main/Like/Learning_CMake/project/build && $(MAKE) -f CMakeFiles/Makefile2 MathFunctions/CMakeFiles/MathFunctions.dir/rule
+.PHONY : MathFunctions/CMakeFiles/MathFunctions.dir/rule
 
-# Build rule for target.
-Tutorial: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 Tutorial
-.PHONY : Tutorial
+# Convenience name for target.
+MathFunctions: MathFunctions/CMakeFiles/MathFunctions.dir/rule
 
-# fast build rule for target.
-Tutorial/fast:
-	$(MAKE) -f CMakeFiles/Tutorial.dir/build.make CMakeFiles/Tutorial.dir/build
-.PHONY : Tutorial/fast
-
-#=============================================================================
-# Target rules for targets named MathFunctions
-
-# Build rule for target.
-MathFunctions: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 MathFunctions
 .PHONY : MathFunctions
 
 # fast build rule for target.
 MathFunctions/fast:
-	$(MAKE) -f MathFunctions/CMakeFiles/MathFunctions.dir/build.make MathFunctions/CMakeFiles/MathFunctions.dir/build
+	cd /home/admin-main/Like/Learning_CMake/project/build && $(MAKE) -f MathFunctions/CMakeFiles/MathFunctions.dir/build.make MathFunctions/CMakeFiles/MathFunctions.dir/build
 .PHONY : MathFunctions/fast
 
-tutorial.o: tutorial.cpp.o
+mysqrt.o: mysqrt.cpp.o
 
-.PHONY : tutorial.o
+.PHONY : mysqrt.o
 
 # target to build an object file
-tutorial.cpp.o:
-	$(MAKE) -f CMakeFiles/Tutorial.dir/build.make CMakeFiles/Tutorial.dir/tutorial.cpp.o
-.PHONY : tutorial.cpp.o
+mysqrt.cpp.o:
+	cd /home/admin-main/Like/Learning_CMake/project/build && $(MAKE) -f MathFunctions/CMakeFiles/MathFunctions.dir/build.make MathFunctions/CMakeFiles/MathFunctions.dir/mysqrt.cpp.o
+.PHONY : mysqrt.cpp.o
 
-tutorial.i: tutorial.cpp.i
+mysqrt.i: mysqrt.cpp.i
 
-.PHONY : tutorial.i
+.PHONY : mysqrt.i
 
 # target to preprocess a source file
-tutorial.cpp.i:
-	$(MAKE) -f CMakeFiles/Tutorial.dir/build.make CMakeFiles/Tutorial.dir/tutorial.cpp.i
-.PHONY : tutorial.cpp.i
+mysqrt.cpp.i:
+	cd /home/admin-main/Like/Learning_CMake/project/build && $(MAKE) -f MathFunctions/CMakeFiles/MathFunctions.dir/build.make MathFunctions/CMakeFiles/MathFunctions.dir/mysqrt.cpp.i
+.PHONY : mysqrt.cpp.i
 
-tutorial.s: tutorial.cpp.s
+mysqrt.s: mysqrt.cpp.s
 
-.PHONY : tutorial.s
+.PHONY : mysqrt.s
 
 # target to generate assembly for a file
-tutorial.cpp.s:
-	$(MAKE) -f CMakeFiles/Tutorial.dir/build.make CMakeFiles/Tutorial.dir/tutorial.cpp.s
-.PHONY : tutorial.cpp.s
+mysqrt.cpp.s:
+	cd /home/admin-main/Like/Learning_CMake/project/build && $(MAKE) -f MathFunctions/CMakeFiles/MathFunctions.dir/build.make MathFunctions/CMakeFiles/MathFunctions.dir/mysqrt.cpp.s
+.PHONY : mysqrt.cpp.s
 
 # Help Target
 help:
@@ -171,11 +160,10 @@ help:
 	@echo "... depend"
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
-	@echo "... Tutorial"
 	@echo "... MathFunctions"
-	@echo "... tutorial.o"
-	@echo "... tutorial.i"
-	@echo "... tutorial.s"
+	@echo "... mysqrt.o"
+	@echo "... mysqrt.i"
+	@echo "... mysqrt.s"
 .PHONY : help
 
 
@@ -187,6 +175,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	$(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /home/admin-main/Like/Learning_CMake/project/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

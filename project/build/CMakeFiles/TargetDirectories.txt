@@ -1,3 +1,6 @@
-C:/Users/10265/Desktop/project/build/CMakeFiles/Tutorial.dir
-C:/Users/10265/Desktop/project/build/CMakeFiles/edit_cache.dir
-C:/Users/10265/Desktop/project/build/CMakeFiles/rebuild_cache.dir
+/home/admin-main/Like/Learning_CMake/project/build/CMakeFiles/rebuild_cache.dir
+/home/admin-main/Like/Learning_CMake/project/build/CMakeFiles/edit_cache.dir
+/home/admin-main/Like/Learning_CMake/project/build/CMakeFiles/Tutorial.dir
+/home/admin-main/Like/Learning_CMake/project/build/MathFunctions/CMakeFiles/rebuild_cache.dir
+/home/admin-main/Like/Learning_CMake/project/build/MathFunctions/CMakeFiles/edit_cache.dir
+/home/admin-main/Like/Learning_CMake/project/build/MathFunctions/CMakeFiles/MathFunctions.dir
